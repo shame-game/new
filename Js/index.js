@@ -5,7 +5,6 @@ window.onload = () => {
     vam('.loadweb').remove();
 };
 
-/* phần dây chuyền ảnh trang chủ */
 
 vam('#next').addEventListener('click', () => {
     let lists = vams('.sli1412b1-items');
@@ -15,6 +14,48 @@ vam('#back').addEventListener('click', () => {
     let lists = vams('.sli1412b1-items');
     vam('.sli1412b1-main').prepend(lists[lists.length - 1])
 })
+
+vam('#c661412b2-iframe_click').addEventListener('click', () => {
+    vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+    vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+    var c661412b2Iframe = `<iframe  class="c661412b2-iframe" src="https://www.youtube.com/embed/2rq6Vph2Sfc?si=xLhapCgHCTZxgnuT" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+    vam('.c661412b2-background_click').addEventListener('click', () => {
+        vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+        vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+        vam('.c661412b2-iframe').remove()
+    })
+})
+
+$("#slick1412c1-main").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    pauseOnHover: false,
+    prevArrow: jQuery("#product_home-next"),
+    nextArrow: jQuery("#product_home-next"),
+    responsive: [{
+        breakpoint: 1023,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        },
+    },
+    {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+        },
+    },
+    ],
+});
 
 const hcontents = $$('.header-contents');
 const himg = $$('.header-img');
@@ -83,17 +124,6 @@ dark.addEventListener('click', () => {
 });
 
 */
-var Img = document.querySelector('.home-clb')
-
-function Math() {
-    const Mathd = (Img.getBoundingClientRect().top) * 0.4
-    return Mathd;
-}
-
-const IG = window.addEventListener('scroll', () => {
-    document.querySelector('.home-2-img').setAttribute('style', `background-position: center ${Math()}px`)
-})
-
 
 
 /* mobile */
