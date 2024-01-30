@@ -1,0 +1,74 @@
+.CL-wrap{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.CL-items{
+    width: 94%;
+    height: 100%;
+    display: flex;
+}
+
+.CL-content{
+    flex: 1;
+    position: relative;
+}
+
+.CL-img{
+    width: 50%;
+    position: relative;
+}
+.CL-boder{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0);
+    border: 5px solid var(--lhu-color);
+    width: 194%;
+    height: 400px;
+    right: -98%;
+    top: 100px;
+    z-index: 1;
+}
+
+.CL-background{
+    position: absolute;
+    background-color: #e3e3e3;
+    width: 198%;
+    height: 400px;
+    right: -100%;
+    top: 115px;
+    z-index: 0;
+}
+
+.CL-img img{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 350px;
+    top: 130px;
+    right: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    border: 1px solid black;
+    box-shadow: 0 0px 10px rgb(142, 142, 142);
+}
+
+.CL-text{
+    position: absolute;
+    top: 150px;
+    left: 85px;
+    z-index: 2;
+}
+
+.CL-text h1{
+    font-size: calc(1rem + 3vw);
+    margin-bottom: 30px;
+}
+
+.CL-text p{
+    width: 90%;
+    font-size: 1.7rem;
+}

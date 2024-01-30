@@ -1,0 +1,37 @@
+.CC-items {
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.CC-contents {
+    width: 100%;
+    height: 100%;
+    transform: translateY(400px);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 1s ease;
+}
+
+.CC-contents h1 {
+    padding: 20px 0 10px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.5vw;
+}
+
+.CC-contents p {
+    font-size: 1.2vw;
+    color: white;
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+
+}
+
+.CC-items:hover>.CC-contents {
+    transform: translateY(200px);
+}
